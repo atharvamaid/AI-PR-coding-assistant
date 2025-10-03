@@ -27,3 +27,28 @@ Built with **Node.js**, **Express**, **GitHub Apps API**, and **OpenAI** (planne
 ```bash
 git clone https://github.com/your-username/ai-pr-coding-assistant.git
 cd ai-pr-coding-assistant
+```
+
+### 2. Install 
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+```bash
+PORT=5000
+GITHUB_APP_ID=123456
+GITHUB_WEBHOOK_SECRET=supersecret123
+GITHUB_PRIVATE_KEY_PATH=./ai-pr-assistant.pem
+OPENAI_API_KEY=sk-xxxx
+```
+
+### 4. Start the server
+```bash
+npm run dev
+```
+
+### 5. Expose to github (webhook testing)
+```bash
+cloudflared tunnel --url http://localhost:5000
+```

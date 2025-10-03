@@ -37,8 +37,8 @@ npm install
 ### 3. Setup Environment Variables
 ```bash
 PORT=5000
-GITHUB_APP_ID=123456
-GITHUB_WEBHOOK_SECRET=supersecret123
+GITHUB_APP_ID=<youur app id>
+GITHUB_WEBHOOK_SECRET=<your webhook secret>
 GITHUB_PRIVATE_KEY_PATH=./ai-pr-assistant.pem
 OPENAI_API_KEY=sk-xxxx
 ```

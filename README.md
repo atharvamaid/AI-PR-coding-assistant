@@ -1,54 +1,57 @@
 # 🤖 AI PR Coding Assistant
 
-An **AI-powered Pull Request Reviewer** that automatically analyzes code changes when a PR is opened and posts feedback.  
-Built with **Node.js**, **Express**, **GitHub Apps API**, and **OpenAI** (planned for Week 2+).  
+An **AI-powered GitHub App** that automatically reviews Pull Requests — analyzing code changes, detecting potential issues, and posting intelligent feedback comments directly on GitHub.
+
+Built with **Node.js**, **Express**, **Octokit (GitHub API)**, and **OpenAI GPT**.
 
 ---
 
-## 📌 Features (Week 1 Milestone ✅)
-- ✅ GitHub App integration
-- ✅ Webhook server receives PR events
-- ✅ Logs PR details (title, number, author, URL)
-- 🚧 Next: fetch code diffs and run AI review (Week 2+)
+## 🚀 Overview
+
+Whenever a developer opens a new Pull Request (PR):
+
+1. GitHub triggers a **Webhook event**.
+2. The app receives the event and authenticates as a **GitHub App** using a **JWT**.
+3. It exchanges the JWT for a **repo-scoped Installation Access Token**.
+4. The server fetches **changed files/diffs** from the PR.
+5. The **OpenAI API** analyzes the changes and generates review feedback.
+6. The app posts this AI-generated review **as a comment directly on the PR** 🎯
+
 
 ---
 
 ## 🛠️ Tech Stack
-- **Backend**: Node.js, Express  
-- **GitHub API**: Octokit (GitHub App authentication)  
-- **Tunneling**: Cloudflare Tunnel (or ngrok)  
-- **AI**: OpenAI GPT models (planned)  
+
+| Layer | Technology |
+|--------|-------------|
+| **Backend Framework** | Node.js + Express |
+| **Language** | TypeScript |
+| **GitHub Integration** | Octokit SDK + GitHub App API |
+| **AI Model** | OpenAI GPT-4o-mini |
+| **Authentication** | JWT (App identity) + Installation Access Token (repo access) |
+| **Tunnel** | Cloudflare Tunnel (for localhost webhook exposure) |
+| **Environment Management** | dotenv |
+
+---
 
 ---
 
 ## ⚡ Setup Instructions
 
-### 1. Clone the Repo
+### Clone the Repo
 ```bash
 git clone https://github.com/your-username/ai-pr-coding-assistant.git
 cd ai-pr-coding-assistant
 ```
 
-### 2. Install 
+### npm install
 ```bash
 npm install
 ```
 
-### 3. Setup Environment Variables
-```bash
-PORT=5000
-GITHUB_APP_ID=<youur app id>
-GITHUB_WEBHOOK_SECRET=<your webhook secret>
-GITHUB_PRIVATE_KEY_PATH=./ai-pr-assistant.pem
-OPENAI_API_KEY=sk-xxxx
-```
 
-### 4. Start the server
-```bash
-npm run dev
-```
 
-### 5. Expose to github (webhook testing)
-```bash
-cloudflared tunnel --url http://localhost:5000
-```
+
+
+
+

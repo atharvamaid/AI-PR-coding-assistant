@@ -63,6 +63,10 @@ OPENAI_API_KEY=sk-xxxx
 npm run dev
 ```
 
+### Expose localhost to github
+```bash
+cloudflared tunnel --url http://localhost:5000
+```
 
 
 

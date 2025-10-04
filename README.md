@@ -49,6 +49,20 @@ cd ai-pr-coding-assistant
 npm install
 ```
 
+### Create .env file
+```bash
+PORT=5000
+GITHUB_APP_ID=<your_app_id>
+GITHUB_WEBHOOK_SECRET=<your_webhook_secret>
+GITHUB_PRIVATE_KEY_PATH=./ai-pr-assistant.pem
+OPENAI_API_KEY=sk-xxxx
+```
+
+### Start development server
+```bash
+npm run dev
+```
+
 
 
 

@@ -1,6 +1,6 @@
 # 🤖 AI PR Coding Assistant
 
-An **AI-powered GitHub App** that automatically reviews Pull Requests — analyzing code changes, detecting potential issues, and posting intelligent feedback comments directly on GitHub.
+An **AI-powered GitHub App** that automatically reviews Pull Requests — analyzing code changes, detecting potential issues, and posting intelligent feedback comments line by line on the files directly on GitHub.
 
 Built with **Node.js**, **Express**, **Octokit (GitHub API)**, and **OpenAI GPT**.
 

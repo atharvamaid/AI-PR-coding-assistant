@@ -67,9 +67,48 @@ npm run dev
 ```bash
 cloudflared tunnel --url http://localhost:5000
 ```
+Copy the generated public URL and paste it into your GitHub App’s Webhook URL field.
+
+---
+
+## 🧠 How It Works
+1. When a Pull Request is opened or updated,
+   GitHub sends a webhook event to your Express server.
+2. The server:
+    Verifies the webhook signature (x-hub-signature-256)
+    Authenticates using JWT + installation access token
+    Fetches changed files and diff patches
+3. The AI reviewer system:
+    Sends each diff chunk to OpenAI
+    Each agent (Security, Performance, Style, Docs) analyzes the diff
+    Comments inline or generates an overall summary
+4. The assistant posts comments directly on GitHub using Octokit.
+
+---
+
+## Visuals
+
+Inline Comments on the PR
+<img width="1433" height="905" alt="Screenshot 2025-10-05 at 5 31 01 PM" src="https://github.com/user-attachments/assets/f65cf89b-f0fa-47d7-8fb3-2e63d030c50e" />
+
+Multi Agent comment on the PR 
+<img width="1433" height="905" alt="Screenshot 2025-10-05 at 5 31 16 PM" src="https://github.com/user-attachments/assets/84a16c9a-a09c-4bbe-a674-9ae06d5872fb" />
 
 
+---
+
+## 🚀 Future Improvements
+1. 🧾 GitHub Action integration for CI/CD
+2. 📊 PR quality scoring (based on AI feedback)
+3. 💾 Dashboard UI for tracking AI reviews
+4. 🧩 Caching and retry logic for rate limits
+5. ⚡ Fine-tuned review agents (custom OpenAI fine-tuning)
 
 
+---
+
+## 🧑‍💻 Contributing
+Contributions are welcome!
+Feel free to fork this repo, create a feature branch, and open a PR.
 
 

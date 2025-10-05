@@ -86,6 +86,17 @@ Copy the generated public URL and paste it into your GitHub App’s Webhook URL 
 
 ---
 
+## Visuals
+
+Inline Comments on the PR
+<img width="1433" height="905" alt="Screenshot 2025-10-05 at 5 31 01 PM" src="https://github.com/user-attachments/assets/f65cf89b-f0fa-47d7-8fb3-2e63d030c50e" />
+
+Multi Agent comment on the PR 
+<img width="1433" height="905" alt="Screenshot 2025-10-05 at 5 31 16 PM" src="https://github.com/user-attachments/assets/84a16c9a-a09c-4bbe-a674-9ae06d5872fb" />
+
+
+---
+
 ## 🚀 Future Improvements
 1. 🧾 GitHub Action integration for CI/CD
 2. 📊 PR quality scoring (based on AI feedback)

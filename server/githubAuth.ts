@@ -1,4 +1,4 @@
-// server/githubAuth.ts
+
 import fs from "fs";
 import jwt from "jsonwebtoken";
 import { Octokit } from "@octokit/rest";

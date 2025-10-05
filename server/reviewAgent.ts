@@ -6,18 +6,11 @@ import { runSecurityAgent } from "./agents/securityAgent";
 import { runPerformanceAgent } from "./agents/performanceAgent";
 import { runStyleAgent } from "./agents/styleAgent";
 import { endpoint, modelName, token } from "./constants/common";
+import { INLINE_REVIEW_PROMPT } from "./constants/prompts";
 
 dotenv.config();
 
 export const openai = new OpenAI({ baseURL: endpoint, apiKey: token });
-// General AI prompt
-const INLINE_REVIEW_PROMPT = `
-You are a lead software engineer reviewing a pull request.
-Given the following code diff, write a short, **actionable** comment (1-3 lines max)
-that identifies a potential issue or improvement.
-Focus only on relevant issues (logic, performance, readability, security).
-If there are no major issues, respond with "No critical feedback".
-`;
 
 export async function reviewInlinePR(
   octokit: Octokit,

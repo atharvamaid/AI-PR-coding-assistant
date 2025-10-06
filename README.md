@@ -15,7 +15,7 @@ Whenever a developer opens a new Pull Request (PR):
 3. It exchanges the JWT for a **repo-scoped Installation Access Token**.
 4. The server fetches **changed files/diffs** from the PR.
 5. The **OpenAI API** analyzes the changes and generates review feedback.
-6. The app posts this AI-generated review **as a line by line review comment directly on the PR** 🎯
+6. The app posts this AI-generated review **as a line by line review comment directly on the PR as review comment** 🎯
 
 
 ---
